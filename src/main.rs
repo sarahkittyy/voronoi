@@ -120,6 +120,7 @@ impl Default for Config {
 impl Config {
     fn parse_args(args: Vec<String>) -> Self {
         let app_name = &args[0];
+        let args = &args[1..];
         // help menu
         if args.contains(&"-h".to_owned()) || args.contains(&"--help".to_owned()) {
             println!("{} {} [Options] [filename]", "Usage:".cyan(), app_name);
